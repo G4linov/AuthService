@@ -3,6 +3,7 @@ package com.nutries.authservice.config;
 import com.nutries.authservice.security.CustomUserDetailsService;
 import com.nutries.authservice.security.JwtRequestFilter;
 
+import com.nutries.authservice.service.AuthService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
@@ -16,6 +17,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.web.client.RestTemplate;
 
 @Configuration
 @EnableAspectJAutoProxy(proxyTargetClass = false)
